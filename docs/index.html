@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>视频播放 - video2</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>视频播放</h1>
+    <p class="hint">把你的视频文件命名为 <code>video.mp4</code> 并上传到 <code>docs/videos/</code>，然后访问此页面播放。</p>
+    <div class="player-wrap">
+      <video id="player" controls playsinline preload="metadata" poster="./poster.png">
+        <source src="./videos/video.mp4" type="video/mp4">
+        <!-- 若需要，可额外添加 webm 或 ogg 格式作为回退 -->
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="upload-help">
+      <h2>上传视频（简易指南）</h2>
+      <ol>
+        <li>在本地把你的视频文件重命名为 <code>video.mp4</code>（或同时放入其他格式），然后把它放到 <code>docs/videos/</code>。</li>
+        <li>通过 GitHub 网页界面上传：进入仓库 -> 点击 "Add file" -> "Upload files"，把文件拖到 <code>docs/videos/</code> 路径并 Commit。</li>
+        <li>或用 git 命令行：
+          <pre>
+git clone https://github.com/wangyueban1503-art/video2.git
+cd video2
+mkdir -p docs/videos
+cp /path/to/your/video.mp4 docs/videos/video.mp4
+git add docs/videos/video.mp4
+git commit -m "Add video file"
+git push
+          </pre>
+        </li>
+      </ol>
+      <p>注意：GitHub 单文件上传限制约为 100MB；若视频较大（>100MB），请参照 docs/README.md 中的替代托管方案。</p>
+    </div>
+    <footer>
+      <p>页面地址（示例，启用 Pages 后访问）：https://wangyueban1503-art.github.io/video2/</p>
+    </footer>
+  </main>
+</body>
+</html>
